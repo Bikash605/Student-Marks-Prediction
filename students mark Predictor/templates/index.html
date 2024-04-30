@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset ="UTF-8">
+  <title>ML API</title>
+  
+  <style>
+  /*
+    body {
+      background-image:url('static/images/college.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }*/
+      
+      h1   {color: blue;}
+      
+      /* CSS code for button */
+      .button_CSS {
+      color: #494949 !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: #ffffff;
+      padding: 20px;
+      border: 4px solid #494949 !important;
+      display: inline-block;
+      transition: all 0.4s ease 0s;
+      }
+      
+      .button_CSS:hover{
+      color: #ffffff !important;
+      background: #f6b93b;
+      border-color: #f6b93b !important;
+      transition: all 0.4s ease 0s;
+      }
+    </style>
+    
+</head>
+
+<body>
+
+  <!-- Show Indian AI College-->
+  <div>
+    <img src="static/images/" class="w3-border w3-padding" style="width:100%">
+  </div>
+  
+  
+  
+ <div class="Login">
+ 
+    <!-- Get input to predict Marks-->
+    <center>
+    <form action="{{url_for('predict')}}"method="post">
+        <h1>*** Enter Your Study Hours to Predict Marks ***</h1>
+        
+        <input align="center" type="number" name="study_hours" placeholder="study hours" required="required" width="48" height="10"/>
+        <br>
+        
+        <br>
+        
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Marks</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+    
+    <!-- Show predicted output using ML model -->
+    <div>
+        <center>
+    <h2>{{ prediction_text }}</h2>
+        </center>
+    </div>
+    
+ </div>
+</body>
+</html>
+                
+  
+  
+    
+    
+    
+          
